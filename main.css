@@ -6,6 +6,16 @@
   fill: rgb(34, 197, 94);
 }
 
+.hero {
+  background: url("assetss/Group 7100.png");
+  background-position: center;
+  background-size: cover;
+}
+.hero img {
+  width: 30%;
+  height: 65%;
+}
+
 * {
   font-family: "Rubik", sans-serif;
 }/*# sourceMappingURL=main.css.map */
