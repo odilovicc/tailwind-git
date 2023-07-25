@@ -1,0 +1,11 @@
+.catalog:hover path {
+  fill: rgb(34, 197, 94);
+}
+
+.card-menu .cart:hover path {
+  fill: rgb(34, 197, 94);
+}
+
+* {
+  font-family: "Rubik", sans-serif;
+}/*# sourceMappingURL=main.css.map */
