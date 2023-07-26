@@ -25,6 +25,16 @@
     }
 }
 
+
+.izbranniy{
+    @apply hover:bg-[#FF6633];
+    &:hover{
+        path{
+            fill: #ffff;
+        }
+    }
+}
+
 // General
 
 *{

@@ -16,6 +16,13 @@
   height: 65%;
 }
 
+.izbranniy {
+  @apply hover:bg-[#FF6633];
+}
+.izbranniy:hover path {
+  fill: white;
+}
+
 * {
   font-family: "Rubik", sans-serif;
 }/*# sourceMappingURL=main.css.map */

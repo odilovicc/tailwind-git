@@ -2,7 +2,11 @@
 module.exports = {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'karta': "url('/assetss/Карта лояльности-10 1.png')",
+      }
+    },
   },
   plugins: [],
 }
