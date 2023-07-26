@@ -23,6 +23,29 @@
   fill: white;
 }
 
+.footer {
+  background: url("/assetss/bg.png");
+}
+
+.modal {
+  transition: opacity 0.5s;
+}
+
+.modal-content {
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(-50px);
+}
+
+.modal.open {
+  opacity: 1;
+}
+
+.modal.open .modal-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 * {
   font-family: "Rubik", sans-serif;
 }/*# sourceMappingURL=main.css.map */

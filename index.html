@@ -12,7 +12,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="flex justify-center items-center">
 
+      </div>
+      
+      <div id="modal" class="fixed hidden inset-0 flex items-center justify-center z-50 h-screen transition duration-300 bg-[#FCD5BA] bg-opacity-80">
+        <div class="bg-white px-20 py-10 rounded-lg relative shadow-lg p-6 opacity-100 content-center">
+          <h2 class="text-3xl font-bold mb-8 text-center">Вход</h2>
+          <form action="">
+            <h4 class="text-[#8f8f8f]">Телефон</h4>
+            <div class="flex items-center">
+              <span class="mr-2">+7</span>
+              <input type="text" id="phoneInput" class="active:outline-none border-2 mt-1 rounded-md border-[#70C05B] px-4 py-2">
+            </div>
+            <button class="w-full bg-[#FCD5BA] text-2xl bg-opacity-80 text-[#FF6633] rounded-md py-4 mt-8 mb-8">Вход</button>
+            <div class="flex items-center gap-4 ">
+                <a href="#" class="bg-white transition duration-300 hover:border-transparent hover:bg-[#ff6633] hover:text-white text-[#70c05b] border-2 border-[#70c05b] rounded-md p-2 px-4 mt-4">Регистрация</a>
+                <a href="#" class="bg-white text-black rounded-md p-2 px-4 mt-4">Забыли пароль?</a>
+            </div>
+        </form>
+          <a href="#" id="closeModalButton" class="absolute top-0 right-0 p-4 py-2 bg-[#F3F2F1] rounded-md"><i class="fas fa-times"></i></a>
+        </div>
+      </div>
     <!-- Notes:
         5 - rating code: <svg width="256" height="16" viewBox="0 0 256 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.10326 1.81698C7.47008 1.07374 8.52992 1.07374 8.89674 1.81699L10.1185 4.29249C10.2641 4.58763 10.5457 4.7922 10.8714 4.83953L13.6033 5.2365C14.4235 5.35568 14.751 6.36365 14.1575 6.94219L12.1807 8.8691C11.945 9.09884 11.8375 9.42984 11.8931 9.75423L12.3598 12.4751C12.4999 13.292 11.6424 13.9149 10.9088 13.5293L8.46534 12.2446C8.17402 12.0915 7.82598 12.0915 7.53466 12.2446L5.09119 13.5293C4.35756 13.9149 3.50013 13.292 3.64024 12.4751L4.1069 9.75423C4.16254 9.42984 4.05499 9.09884 3.81931 8.8691L1.8425 6.94219C1.24898 6.36365 1.57649 5.35568 2.39671 5.2365L5.12859 4.83953C5.4543 4.7922 5.73587 4.58763 5.88153 4.29249L7.10326 1.81698Z" fill="#FF6633"/>
@@ -88,10 +109,10 @@
                     <h3 class="text-md font-normal mx-2 font-bold text-gray-800">Корзина</h3>                        
                 </div>
               </div>
-              <div class="flex items-center px-2 ml-4">
+              <a href="#" id="openModalButton" class="flex items-center px-2 ml-4">
                 <img src="/assetss/avatar.png" alt="">
                 <h1 class="mx-4 mr-9">Алексей</h2><i class="fas fa-chevron-down"></i>
-              </div>
+                </a>
         </header>        
     </div>
     
@@ -727,7 +748,7 @@
 
     <!-- Quotes section -->
 
-    <div class="container py-5 mx-auto mb-32">
+    <div class="container py-5 mx-auto pb-32">
         <div class="flex items-center py-24">
             <h1 class="font-bold text-4xl text-[#414141]">Статьи</h1>
             <a href="#" class="flex items-center content-end ml-auto text-[#606060]">Все статьи <i class="mx-10 text-gray-600 w-3 h-3 fas fa-chevron-right"></i></a>
@@ -767,10 +788,64 @@
 
 </section>
    
+    <!-- Footer -->
 
+    <div class="bg-[#F9F4E2] footer relative">
+        <div class="container py-5 mx-auto flex items-cener">
+            <div class="flex py-5">
+              <div class="flex gap-4 items-center">
+                <img src="/assetss/logo.png" class="mr-4" alt="">
+                <a href="#">О компании</a>
+                <a href="#">Контакты</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Статьи</a>
+                <a href="#">Политика обработки персональных данных</a>
+              </div>
+            </div>
+            <div class="flex items-center ml-auto gap-4">
+              <a href="#"><img class="hover:scale-110 transition duration-300" src="/assetss/instagram.png" alt=""></a>
+              <a href="#"><img class="hover:scale-110 transition duration-300" src="/assetss/vkontakte.png" alt=""></a>
+              <a href="#"><img class="hover:scale-110 transition duration-300" src="/assetss/facebook.png" alt=""></a>
+              <a href="#"><img class="hover:scale-110 transition duration-300" src="/assetss/ok.png" alt=""></a>
+              <i class="ml-4 fas fa-phone"></i><h2>8 800 777 33 33</h2>
+            </div>
+            
+          </div>
+    </div>
+
+    <!-- Footer -->
 
     
+    
+    <script>
+        const openModalButton = document.getElementById('openModalButton');
+        const closeModalButton = document.getElementById('closeModalButton');
+        const modal = document.getElementById('modal');
+      
+        openModalButton.addEventListener('click', () => {
+          modal.classList.remove('hidden');
+        });
+      
+        closeModalButton.addEventListener('click', () => {
+          modal.classList.add('hidden');
+        });
+        const phoneInput = document.getElementById('phoneInput');
 
+phoneInput.addEventListener('input', (event) => {
+  const input = event.target;
+  let value = input.value.replace(/\s/g, '');
+  let formattedValue = '';
+
+  for (let i = 0; i < value.length; i++) {
+    if (i > 0 && i % 3 === 0) {
+      formattedValue += ' ';
+    }
+    formattedValue += value[i];
+  }
+
+  input.value = formattedValue;
+});
+      </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
 </html>
